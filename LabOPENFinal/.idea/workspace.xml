@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e6f40ded-8f15-4c3f-ac49-9eeaba0f7123" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo_data/en-ner-person.demo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo_data/en-sent1.demo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/eval.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/tagguide.ps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eval_data/en-sent.eval" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/en-ner-person.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/en-ner-person.model" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/en-pos-maxent.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/en-pos-perceptron.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/en-sent.model" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/en-token.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/en-token.model" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/ChunkerMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/DocumentClassifierMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/NameFinderMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/ParserMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/PartOfSpeechTaggerMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/SentenceDetectionMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/TokenizerMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/ChunkerTrainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/DocumentClassifierTrainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/NameFinderTrainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/ParserTrainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/PartOfSpeechTaggerTrainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/SentenceDetectionTrainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/TokenizerTrainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/training_data/Ocmulgee National Monument - Georgia.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/training_data/conll2000-chunker.train" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/training_data/en-chunker.train" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/training_data/en-doccat.train" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/training_data/en-ner-person.train" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/training_data/en-parser.train" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/training_data/en-pos.train" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/training_data/en-sent-with-ie.train" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/training_data/en-sent.train" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/training_data/en-token.train" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OPENLab/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OPENLab/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OPENLab/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OPENLab/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OPENLab/src/main/java/org/example/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OPENLab/src/test/java/org/example/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UnoLAB/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UnoLAB/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UnoLAB/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UnoLAB/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UnoLAB/src/main/java/org/example/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UnoLAB/src/test/java/org/example/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-app/.idea/my-app.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "pablogrp"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/pablogrp/LAB_Sonar.git",
+    "accountId": "89eaea01-35c2-4c5c-ac55-d0266e91f395"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2owQZcUbKfRx4vec985U60EEmis" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.TokenizerMain.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/pablo/OneDrive/Escritorio/OPENLab"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pablo\OneDrive\Escritorio\LabOPENFinal" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e6f40ded-8f15-4c3f-ac49-9eeaba0f7123" name="Changes" comment="" />
+      <created>1731778215928</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731778215928</updated>
+    </task>
+    <servers />
+  </component>
+</project>
