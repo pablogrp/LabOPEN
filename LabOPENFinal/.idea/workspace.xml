@@ -7,8 +7,6 @@
     <list default="true" id="e6f40ded-8f15-4c3f-ac49-9eeaba0f7123" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/TokenizerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/TokenizerMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/output/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/output/output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/.idea/misc.xml" beforeDir="false" />
