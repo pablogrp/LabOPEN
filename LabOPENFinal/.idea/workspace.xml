@@ -5,86 +5,114 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6f40ded-8f15-4c3f-ac49-9eeaba0f7123" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo_data/en-ner-person.demo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo_data/en-sent1.demo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/eval.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/tagguide.ps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eval_data/en-sent.eval" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/en-ner-person.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/en-ner-person.model" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/en-pos-maxent.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/en-pos-perceptron.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/en-sent.model" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/en-token.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/en-token.model" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/ChunkerMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/DocumentClassifierMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/NameFinderMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/ParserMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/PartOfSpeechTaggerMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/SentenceDetectionMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/TokenizerMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/ChunkerTrainer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/DocumentClassifierTrainer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/NameFinderTrainer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/ParserTrainer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/PartOfSpeechTaggerTrainer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/SentenceDetectionTrainer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/TokenizerTrainer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_data/Ocmulgee National Monument - Georgia.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_data/conll2000-chunker.train" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_data/en-chunker.train" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_data/en-doccat.train" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_data/en-ner-person.train" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_data/en-parser.train" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_data/en-pos.train" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_data/en-sent-with-ie.train" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_data/en-sent.train" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training_data/en-token.train" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OPENLab/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OPENLab/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OPENLab/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OPENLab/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OPENLab/src/main/java/org/example/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OPENLab/src/test/java/org/example/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UnoLAB/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UnoLAB/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UnoLAB/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UnoLAB/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UnoLAB/src/main/java/org/example/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UnoLAB/src/test/java/org/example/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../my-app/.idea/my-app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/TokenizerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/TokenizerMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/output/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/output/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/doc/cards.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/doc/cards.uml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/doc/event-storming.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/doc/events.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/doc/events.uml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/doc/game.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/doc/game.uml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/doc/new-uno-v2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/doc/player.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/doc/player.uml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/UnoApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/application/GameAppService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/application/IGameAppService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/application/dto/PlayerInfoDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/domain/card/AbstractCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/domain/card/ActionCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/domain/card/Card.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/domain/card/CardColor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/domain/card/CardDeck.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/domain/card/CardType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/domain/card/CardUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/domain/card/NumberCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/domain/card/WildCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/domain/common/DomainEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/domain/common/DomainEventPublisher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/domain/common/DomainEventSubscriber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/domain/common/Entity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/domain/game/CardRules.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/domain/game/DealerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/domain/game/DrawPile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/domain/game/Game.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/domain/game/GameBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/domain/game/events/CardDrawn.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/domain/game/events/CardPlayed.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/domain/game/events/GameOver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/domain/player/Direction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/domain/player/HandCardList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/domain/player/ImmutablePlayer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/domain/player/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/domain/player/PlayerRoundIterator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/ui/AppFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/ui/common/StyleUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/ui/view/CardView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/ui/view/ColorPicker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/ui/view/GameStatusView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/ui/view/PlayerView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/java/ui/view/TableView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/main/resources/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/test/java/domain/TestHandCardList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/test/java/domain/card/CardCounter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/test/java/domain/card/CardCounterAssertionHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/test/java/domain/card/TestCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/test/java/domain/card/TestCardDeck.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/test/java/domain/card/TestCardUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/test/java/domain/common/TestDomainEventPublisher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/test/java/domain/game/TestCardRules.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/test/java/domain/game/TestDealerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/test/java/domain/game/TestDrawPile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/test/java/domain/game/TestGameBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/test/java/domain/game/TestGamePlay.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/test/java/domain/game/TestGameStart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/test/java/domain/player/TestHandCardList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/test/java/domain/player/TestPlayersIterator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/test/java/domain/testhelper/CardTestFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/src/test/java/domain/testhelper/PlayerTestFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UnoLAB/domain/common/DomainEvent.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "pablogrp"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;pablogrp&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/pablogrp/LAB_Sonar.git",
+    "url": "https://github.com/pablogrp/LabOPEN.git",
     "accountId": "89eaea01-35c2-4c5c-ac55-d0266e91f395"
   }
 }]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2owQZcUbKfRx4vec985U60EEmis" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -98,11 +126,14 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/pablo/OneDrive/Escritorio/OPENLab"
+    "last_opened_file_path": "C:/Users/pablo/OneDrive/Escritorio/LabOPENFinal"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pablo\OneDrive\Escritorio\LabOPENFinal\src\main\java\org\fogbeam\example\opennlp\inputs" />
+      <recent name="C:\Users\pablo\OneDrive\Escritorio\LabOPENFinal\src\main\java\org\fogbeam\example\opennlp\input" />
+      <recent name="C:\Users\pablo\OneDrive\Escritorio\LabOPENFinal\src\main\java\org\fogbeam\example\opennlp\output" />
       <recent name="C:\Users\pablo\OneDrive\Escritorio\LabOPENFinal" />
     </key>
   </component>
