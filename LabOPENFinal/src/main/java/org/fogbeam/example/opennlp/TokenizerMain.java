@@ -1,48 +1,62 @@
-
 package org.fogbeam.example.opennlp;
 
-
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-
+import java.io.*;
+import java.nio.file.*;
+import java.util.stream.Stream;
 import opennlp.tools.tokenize.Tokenizer;
 import opennlp.tools.tokenize.TokenizerME;
 import opennlp.tools.tokenize.TokenizerModel;
 
+public class TokenizerMain {
+	public static void main(String[] args) {
+		// Directorio de entrada y archivo de salida
+		String inputDirectory = "src/main/java/org/fogbeam/example/opennlp/inputs"; // Cambiar a la ruta real de los archivos de entrada
+		String outputFile = "output/output.txt"; // Cambiar a la ruta deseada para el archivo de salida
 
-public class TokenizerMain
-{
-	public static void main( String[] args ) throws Exception {
-		// the provided model
-		// InputStream modelIn = new FileInputStream( "models/en-token.bin" );
-		// the model we trained
-		InputStream modelIn = new FileInputStream( "models/en-token.model" );
-		try	{
-			TokenizerModel model = new TokenizerModel( modelIn );
+		// Modelo de tokenización
+		String modelPath = "models/en-token.model";
+
+		try (InputStream modelIn = new FileInputStream(modelPath)) {
+			TokenizerModel model = new TokenizerModel(modelIn);
 			Tokenizer tokenizer = new TokenizerME(model);
-				/* note what happens with the "three depending on which model you use */
-			String[] tokens = tokenizer.tokenize (  "A ranger journeying with Oglethorpe, founder of the Georgia Colony, "
-							+ " mentions \"three Mounts raised by the Indians over three of their Great Kings" 
-							+ " who were killed in the Wars.\"" );
-			
-			for( String token : tokens ) {
-				System.out.println( token );
+
+			// Crear directorio de salida si no existe
+			File outputFileObj = new File(outputFile);
+			if (!outputFileObj.getParentFile().exists()) {
+				outputFileObj.getParentFile().mkdirs();
+				System.out.println("Directorio de salida creado: " + outputFileObj.getParentFile().getAbsolutePath());
 			}
-		}
-		catch( IOException e ) {
+
+			try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFileObj))) {
+				System.out.println("Archivo de salida creado: " + outputFileObj.getAbsolutePath());
+
+				// Procesar todos los archivos del directorio de entrada
+				try (Stream<Path> filePaths = Files.list(Paths.get(inputDirectory))) {
+					filePaths.filter(Files::isRegularFile).forEach(filePath -> {
+						try {
+							System.out.println("Procesando archivo: " + filePath);
+							// Leer el contenido del archivo
+							String content = Files.readString(filePath);
+							System.out.println("Contenido del archivo: " + content);
+							// Tokenizar el contenido
+							String[] tokens = tokenizer.tokenize(content);
+							// Escribir los tokens en el archivo de salida
+							for (String token : tokens) {
+								writer.write(token);
+								writer.write(" ");
+							}
+							writer.write("\n"); // Separar bloques de tokens por archivo
+						} catch (IOException e) {
+							System.err.println("Error al procesar el archivo: " + filePath);
+							e.printStackTrace();
+						}
+					});
+				}
+			}
+			System.out.println("Proceso completado. Tokens guardados en: " + outputFile);
+		} catch (IOException e) {
+			System.err.println("Error inicializando el modelo o escribiendo el archivo de salida.");
 			e.printStackTrace();
 		}
-		finally	{
-			if( modelIn != null ) {
-				try	{
-					modelIn.close();
-				}
-				catch( IOException e ) {
-					e.printStackTrace();
-				}
-			}
-		}
-		System.out.println( "\n-----\ndone" );
 	}
 }
