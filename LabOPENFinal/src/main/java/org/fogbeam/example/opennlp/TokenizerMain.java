@@ -2,16 +2,19 @@ package org.fogbeam.example.opennlp;
 
 import java.io.*;
 import java.nio.file.*;
-import java.util.stream.Stream;
 import opennlp.tools.tokenize.Tokenizer;
 import opennlp.tools.tokenize.TokenizerME;
 import opennlp.tools.tokenize.TokenizerModel;
 
 public class TokenizerMain {
 	public static void main(String[] args) {
-		// Directorio de entrada y archivo de salida
-		String inputDirectory = "src/main/java/org/fogbeam/example/opennlp/inputs"; // Cambiar a la ruta real de los archivos de entrada
-		String outputFile = "src/main/java/org/fogbeam/example/opennlp/output/output.txt"; // Cambiar a la ruta deseada para el archivo de salida
+		if (args.length < 2) {
+			System.err.println("Usage: java TokenizerMain <outputFile> <inputFile1> <inputFile2> ... <inputFileN>");
+			System.exit(1);
+		}
+
+		// Archivo de salida
+		String outputFile = args[0];
 
 		// Modelo de tokenización
 		String modelPath = "models/en-token.model";
@@ -31,9 +34,10 @@ public class TokenizerMain {
 			try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFileObj, false))) {
 				System.out.println("Archivo de salida creado: " + outputFileObj.getAbsolutePath());
 
-				// Procesar todos los archivos del directorio de entrada
-				try (Stream<Path> filePaths = Files.list(Paths.get(inputDirectory))) {
-					filePaths.filter(Files::isRegularFile).forEach(filePath -> {
+				// Procesar todos los archivos de entrada pasados como argumentos
+				for (int i = 1; i < args.length; i++) {
+					Path filePath = Paths.get(args[i]);
+					if (Files.isRegularFile(filePath)) {
 						try {
 							System.out.println("Procesando archivo: " + filePath);
 							// Leer el contenido del archivo
@@ -52,7 +56,9 @@ public class TokenizerMain {
 							System.err.println("Error al procesar el archivo: " + filePath);
 							e.printStackTrace();
 						}
-					});
+					} else {
+						System.err.println("El archivo no existe o no es un archivo regular: " + filePath);
+					}
 				}
 			}
 			System.out.println("Proceso completado. Tokens guardados en: " + outputFile);
