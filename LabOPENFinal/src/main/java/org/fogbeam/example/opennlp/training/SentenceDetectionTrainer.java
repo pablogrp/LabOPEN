@@ -19,8 +19,7 @@ import opennlp.tools.util.TrainingParameters;
 
 public class SentenceDetectionTrainer
 {
-	public static void main( String[] args ) throws Exception
-	{
+	public static void main( String[] args ) throws Exception {
 		Charset charset = Charset.forName("UTF-8");				
 		ObjectStream<String> lineStream = 
 				new PlainTextByLineStream(new FileInputStream("training_data/en-sent.train"), charset);

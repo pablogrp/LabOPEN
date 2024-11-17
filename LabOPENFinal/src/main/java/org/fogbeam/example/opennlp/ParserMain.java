@@ -14,14 +14,10 @@ import opennlp.tools.parser.ParserModel;
 
 
 
-public class ParserMain
-{
-	public static void main( String[] args ) throws Exception
-	{
+public class ParserMain {
+	public static void main( String[] args ) throws Exception {
 		InputStream modelIn = new FileInputStream( "models/en-parser-chunking.bin" );
-		
-		try
-		{
+		try	{
 			ParserModel model = new ParserModel( modelIn );
 			
 			Parser parser = ParserFactory.create(model);
@@ -37,8 +33,7 @@ public class ParserMain
 			parse.showCodeTree();
 			
 		}
-		catch( IOException e )
-		{
+		catch( IOException e )	{
 			e.printStackTrace();
 		}
 		finally

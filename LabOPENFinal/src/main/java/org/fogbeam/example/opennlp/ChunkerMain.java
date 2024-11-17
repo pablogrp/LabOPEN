@@ -16,8 +16,7 @@ public class ChunkerMain
 	{
 		InputStream modelIn = null;
 		ChunkerModel model = null;
-		try
-		{
+		try {
 			modelIn = new FileInputStream( "models/en-chunker.model" );
 			model = new ChunkerModel( modelIn );
 			
@@ -49,32 +48,23 @@ public class ChunkerMain
 			   for each other word in the chunk.
 			 */
 			
-			for( int i = 0; i < sent.length; i++ )
-			{
+			for( int i = 0; i < sent.length; i++ )	{
 				System.out.println( "Token ["+ sent[i] + "] has chunk tag [" + tag[i] + "] with probability = " + probs[i] );
 			}
 			
 		}
-		catch( IOException e )
-		{
+		catch( IOException e )	{
 			// Model loading failed, handle the error
 			e.printStackTrace();
 		}
-		finally
-		{
-			if( modelIn != null )
-			{
-				try
-				{
+		finally	{
+			if( modelIn != null ) {
+				try	{
 					modelIn.close();
 				}
-				catch( IOException e )
-				{
-				}
+				catch( IOException e ) {}
 			}
 		}
-		
-		
 		System.out.println( "done" );
 	}
 }

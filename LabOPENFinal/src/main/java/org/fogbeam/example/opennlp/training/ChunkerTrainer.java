@@ -18,50 +18,33 @@ import opennlp.tools.util.PlainTextByLineStream;
 import opennlp.tools.util.TrainingParameters;
 
 
-public class ChunkerTrainer
-{
-	public static void main( String[] args ) throws Exception
-	{
+public class ChunkerTrainer {
+	public static void main( String[] args ) throws Exception	{
 		Charset charset = Charset.forName( "UTF-8" );
-		
 		// without enough training data, you get a NPE...
 		// ObjectStream<String> lineStream = new PlainTextByLineStream(
 		//		new FileInputStream( "training_data/en-chunker.train" ), charset );
-		
-		
-		ObjectStream<String> lineStream = new PlainTextByLineStream(
-				new FileInputStream( "training_data/conll2000-chunker.train" ), charset );
-		
-		
-		ObjectStream<ChunkSample> sampleStream = new ChunkSampleStream(
-				lineStream );
+		ObjectStream<String> lineStream = new PlainTextByLineStream(new FileInputStream( "training_data/conll2000-chunker.train" ), charset );
+
+		ObjectStream<ChunkSample> sampleStream = new ChunkSampleStream(lineStream );
 		ChunkerModel model;
-		try
-		{
-			model = ChunkerME.train( "en", sampleStream,
-					new DefaultChunkerContextGenerator(),
-					TrainingParameters.defaultParams() );
+		try	{
+			model = ChunkerME.train( "en", sampleStream, new DefaultChunkerContextGenerator(), TrainingParameters.defaultParams() );
 		}
-		finally
-		{
+		finally	{
 			sampleStream.close();
 		}
 		OutputStream modelOut = null;
 		String modelFile = "models/en-chunker.model";
-		try
-		{
-			modelOut = new BufferedOutputStream( new FileOutputStream(
-					modelFile ) );
+		try	{
+			modelOut = new BufferedOutputStream( new FileOutputStream(modelFile ) );
 			model.serialize( modelOut );
 		}
-		finally
-		{
-			if( modelOut != null )
-			{
+		finally	{
+			if( modelOut != null )	{
 				modelOut.close();
 			}
 		}
-		
 		System.out.println( "done" );
 	}
 }

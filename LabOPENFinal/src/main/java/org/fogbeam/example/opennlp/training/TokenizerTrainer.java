@@ -17,41 +17,30 @@ import opennlp.tools.util.PlainTextByLineStream;
 import opennlp.tools.util.TrainingParameters;
 
 
-public class TokenizerTrainer
-{
-	public static void main( String[] args ) throws Exception
-	{
+public class TokenizerTrainer {
+	public static void main( String[] args ) throws Exception {
 		Charset charset = Charset.forName( "UTF-8" );
 		ObjectStream<String> lineStream = new PlainTextByLineStream(
 				new FileInputStream( "training_data/en-token.train" ), charset );
-		
 		ObjectStream<TokenSample> sampleStream = new TokenSampleStream( lineStream );
-		
 		TokenizerModel model;
-		
-		try
-		{
+		try {
 			model = TokenizerME.train( "en", sampleStream, true, TrainingParameters.defaultParams() );
 		}
-		finally
-		{
+		finally	{
 			sampleStream.close();
 		}
 		
 		OutputStream modelOut = null;
-		try
-		{
+		try	{
 			modelOut = new BufferedOutputStream( new FileOutputStream( "models/en-token.model" ) );
 			model.serialize( modelOut );
 		}
-		finally
-		{
-			if( modelOut != null )
-			{
+		finally	{
+			if( modelOut != null )	{
 				modelOut.close();
 			}
 		}
-		
 		System.out.println( "done" );
 	}
 }

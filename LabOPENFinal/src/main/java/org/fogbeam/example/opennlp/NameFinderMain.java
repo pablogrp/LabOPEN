@@ -16,17 +16,12 @@ public class NameFinderMain
 	/**
 	 * @param args
 	 */
-	public static void main( String[] args ) throws Exception
-	{
+	public static void main( String[] args ) throws Exception {
 		InputStream modelIn = new FileInputStream( "models/en-ner-person.model" );
 		// InputStream modelIn = new FileInputStream( "models/en-ner-person.bin" );
-		
-		try
-		{
+		try	{
 			TokenNameFinderModel model = new TokenNameFinderModel( modelIn );
-		
 			NameFinderME nameFinder = new NameFinderME(model);
-			
 			String[] tokens = { //"A", "guy", "named",
 								// "Mr.", 
 								"Phillip", 
@@ -40,37 +35,26 @@ public class NameFinderMain
 			
 			Span[] names = nameFinder.find( tokens );
 		
-			for( Span ns : names )
-			{
+			for( Span ns : names )	{
 				System.out.println( "ns: " + ns.toString() );
 			
 				// if you want to actually do something with the name
 				// ...
 				
 			}
-		
 			nameFinder.clearAdaptiveData();
-			
 		}
-		catch( IOException e )
-		{
+		catch( IOException e )	{
 			e.printStackTrace();
 		}
-		finally
-		{
-			if( modelIn != null )
-			{
-				try
-				{
+		finally	{
+			if( modelIn != null ) {
+				try	{
 					modelIn.close();
 				}
-				catch( IOException e )
-				{
-				}
+				catch( IOException e ) {}
 			}
 		}
-		
-		
 		System.out.println( "done" );
 	}
 }

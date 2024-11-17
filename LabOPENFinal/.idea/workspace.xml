@@ -5,6 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6f40ded-8f15-4c3f-ac49-9eeaba0f7123" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/en-token.model" beforeDir="false" afterPath="$PROJECT_DIR$/models/en-token.model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/ChunkerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/ChunkerMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/DocumentClassifierMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/DocumentClassifierMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/NameFinderMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/NameFinderMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/ParserMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/ParserMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/PartOfSpeechTaggerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/PartOfSpeechTaggerMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/SentenceDetectionMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/SentenceDetectionMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/TokenizerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/TokenizerMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/ChunkerTrainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/ChunkerTrainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/DocumentClassifierTrainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/DocumentClassifierTrainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/NameFinderTrainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/NameFinderTrainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/ParserTrainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/ParserTrainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/PartOfSpeechTaggerTrainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/PartOfSpeechTaggerTrainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/SentenceDetectionTrainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/SentenceDetectionTrainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/TokenizerTrainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fogbeam/example/opennlp/training/TokenizerTrainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/.idea/misc.xml" beforeDir="false" />
@@ -100,12 +116,12 @@
     &quot;assignee&quot;: &quot;pablogrp&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/pablogrp/LabOPEN.git",
-    "accountId": "89eaea01-35c2-4c5c-ac55-d0266e91f395"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/pablogrp/LabOPEN.git&quot;,
+    &quot;accountId&quot;: &quot;89eaea01-35c2-4c5c-ac55-d0266e91f395&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -114,17 +130,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.TokenizerMain.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/pablo/OneDrive/Escritorio/LabOPENFinal"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.TokenizerMain.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TokenizerTrainer.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/pablo/OneDrive/Escritorio/LabOPENFinal&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\pablo\OneDrive\Escritorio\LabOPENFinal\src\main\java\org\fogbeam\example\opennlp\inputs" />
