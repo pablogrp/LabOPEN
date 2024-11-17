@@ -1,6 +1,4 @@
-
 package org.fogbeam.example.opennlp.training;
-
 
 import java.io.BufferedOutputStream;
 import java.io.FileInputStream;
@@ -17,30 +15,34 @@ import opennlp.tools.util.ObjectStream;
 import opennlp.tools.util.PlainTextByLineStream;
 import opennlp.tools.util.TrainingParameters;
 
-
+/**
+ * @class PartOfSpeechTaggerTrainer
+ * @brief Main class for training a POS tagger model using OpenNLP.
+ */
 public class PartOfSpeechTaggerTrainer {
-	public static void main( String[] args ) {
+	/**
+	 * @brief Main method to train the POS tagger model.
+	 * @param args Command line arguments.
+	 */
+	public static void main(String[] args) {
 		POSModel model = null;
 		InputStream dataIn = null;
-		try	{
-			dataIn = new FileInputStream( "training_data/en-pos.train" );
-			ObjectStream<String> lineStream = new PlainTextByLineStream(
-					dataIn, "UTF-8" );
-			ObjectStream<POSSample> sampleStream = new WordTagSampleStream(
-					lineStream );
-			model = POSTaggerME.train( "en", sampleStream,
-					TrainingParameters.defaultParams(), null, null );
-		}
-		catch( IOException e )	{
+		try {
+			// Load training data
+			dataIn = new FileInputStream("training_data/en-pos.train");
+			ObjectStream<String> lineStream = new PlainTextByLineStream(dataIn, "UTF-8");
+			ObjectStream<POSSample> sampleStream = new WordTagSampleStream(lineStream);
+
+			// Train the model
+			model = POSTaggerME.train("en", sampleStream, TrainingParameters.defaultParams(), null, null);
+		} catch (IOException e) {
 			// Failed to read or parse training data, training failed
 			e.printStackTrace();
-		}
-		finally	{
-			if( dataIn != null ) {
-				try	{
+		} finally {
+			if (dataIn != null) {
+				try {
 					dataIn.close();
-				}
-				catch( IOException e ) {
+				} catch (IOException e) {
 					// Not an issue, training already finished.
 					// The exception should be logged and investigated
 					// if part of a production system.
@@ -48,29 +50,27 @@ public class PartOfSpeechTaggerTrainer {
 				}
 			}
 		}
+
 		OutputStream modelOut = null;
 		String modelFile = "models/en-pos.model";
-		try	{
-			modelOut = new BufferedOutputStream( new FileOutputStream(modelFile ) );
-			model.serialize( modelOut );
-		}
-		catch( IOException e ) {
+		try {
+			// Save the trained model
+			modelOut = new BufferedOutputStream(new FileOutputStream(modelFile));
+			model.serialize(modelOut);
+		} catch (IOException e) {
 			// Failed to save model
 			e.printStackTrace();
-		}
-		finally	{
-			if( modelOut != null )	{
-				try	{
+		} finally {
+			if (modelOut != null) {
+				try {
 					modelOut.close();
-				}
-				catch( IOException e )	{
+				} catch (IOException e) {
 					// Failed to correctly save model.
 					// Written model might be invalid.
 					e.printStackTrace();
 				}
 			}
-
 		}
-		System.out.println( "done" );
+		System.out.println("done");
 	}
 }
