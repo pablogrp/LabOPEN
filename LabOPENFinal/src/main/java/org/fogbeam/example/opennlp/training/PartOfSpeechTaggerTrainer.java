@@ -29,12 +29,12 @@ public class PartOfSpeechTaggerTrainer {
 		InputStream dataIn = null;
 
 		try {
-			// Load training data
+			// Cargar los datos de entrenamiento
 			dataIn = new FileInputStream("training_data/en-pos.train");
 			ObjectStream<String> lineStream = new PlainTextByLineStream(dataIn, "UTF-8");
 			ObjectStream<POSSample> sampleStream = new WordTagSampleStream(lineStream);
 
-			// Train the model
+			// Entrenar el modelo
 			model = POSTaggerME.train("en", sampleStream, TrainingParameters.defaultParams(), null, null);
 		} catch (IOException e) {
 			// Usamos el logger para registrar el error
@@ -50,27 +50,20 @@ public class PartOfSpeechTaggerTrainer {
 			}
 		}
 
-		OutputStream modelOut = null;
-		String modelFile = "models/en-pos.model";
+		if (model == null) {
+			LOGGER.severe("Model training failed, the model is null. Exiting...");
+			return;  // Si el modelo es nulo, terminamos el proceso
+		}
 
-		try {
-			// Save the trained model
-			modelOut = new BufferedOutputStream(new FileOutputStream(modelFile));
-			model.serialize(modelOut);
+		// Guardar el modelo entrenado si no es nulo
+		try (OutputStream modelOut = new BufferedOutputStream(new FileOutputStream("models/en-pos.model"))) {
+			model.serialize(modelOut); // Serializar el modelo a un archivo
 		} catch (IOException e) {
 			// Usamos el logger para registrar el error
 			LOGGER.log(Level.SEVERE, "Failed to save model", e);
-		} finally {
-			if (modelOut != null) {
-				try {
-					modelOut.close();
-				} catch (IOException e) {
-					// Registramos el error si ocurre
-					LOGGER.log(Level.SEVERE, "Failed to correctly save model, the written model might be invalid", e);
-				}
-			}
 		}
 
+		// Mensaje de éxito al final
 		System.out.println("done");
 	}
 }

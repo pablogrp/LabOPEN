@@ -2,8 +2,6 @@ package org.fogbeam.example.opennlp;
 
 import java.io.*;
 import java.nio.file.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import opennlp.tools.tokenize.Tokenizer;
 import opennlp.tools.tokenize.TokenizerME;
 import opennlp.tools.tokenize.TokenizerModel;
@@ -14,8 +12,6 @@ import opennlp.tools.tokenize.TokenizerModel;
  * Esta clase carga un modelo de tokenización, tokeniza el contenido de uno o más archivos de entrada y guarda los tokens en un archivo de salida.
  */
 public class TokenizerMain {
-
-	private static final Logger LOGGER = Logger.getLogger(TokenizerMain.class.getName());
 
 	/**
 	 * Método principal que ejecuta la tokenización.
@@ -69,8 +65,8 @@ public class TokenizerMain {
 			}
 			System.out.println("Proceso completado. Tokens guardados en: " + outputFile);
 		} catch (IOException e) {
-			// Uso de Logger para manejar la excepción de manera más adecuada en producción
-			LOGGER.log(Level.SEVERE, "Error inicializando el modelo o escribiendo el archivo de salida.", e);
+			System.err.println("Error inicializando el modelo o escribiendo el archivo de salida.");
+			e.printStackTrace();
 		}
 	}
 
@@ -111,8 +107,7 @@ public class TokenizerMain {
 			writer.flush(); // Asegurarse de que los datos se escriben en el archivo
 		} catch (IOException e) {
 			System.err.println("Error al procesar el archivo: " + filePath);
-			// Registrar la excepción de manera adecuada con el Logger
-			LOGGER.log(Level.SEVERE, "Error al procesar el archivo: " + filePath, e);
+			e.printStackTrace();
 		}
 	}
 }
