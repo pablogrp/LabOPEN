@@ -16,8 +16,16 @@ import opennlp.tools.doccat.DocumentSampleStream;
 import opennlp.tools.util.ObjectStream;
 import opennlp.tools.util.PlainTextByLineStream;
 
-
+/**
+ * @class DocumentClassifierTrainer
+ * @brief Main class for training a document classifier model using OpenNLP.
+ */
 public class DocumentClassifierTrainer {
+	/**
+	 * @brief Main method to train the document classifier model.
+	 * @param args Command line arguments.
+	 * @throws Exception if an error occurs during training.
+	 */
 	public static void main( String[] args ) throws Exception {
 		DoccatModel model = null;
 		InputStream dataIn = null;
