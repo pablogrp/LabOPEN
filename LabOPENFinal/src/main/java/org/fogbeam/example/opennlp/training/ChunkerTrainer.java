@@ -17,8 +17,16 @@ import opennlp.tools.util.ObjectStream;
 import opennlp.tools.util.PlainTextByLineStream;
 import opennlp.tools.util.TrainingParameters;
 
-
+/**
+ * @class ChunkerTrainer
+ * @brief Main class for training a chunker model using OpenNLP.
+ */
 public class ChunkerTrainer {
+	/**
+	 * @brief Main method to train the chunker model.
+	 * @param args Command line arguments.
+	 * @throws Exception if an error occurs during training.
+	 */
 	public static void main( String[] args ) throws Exception	{
 		Charset charset = Charset.forName( "UTF-8" );
 		// without enough training data, you get a NPE...
