@@ -3,6 +3,8 @@ package org.fogbeam.example.opennlp;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import opennlp.tools.chunker.ChunkerME;
 import opennlp.tools.chunker.ChunkerModel;
@@ -12,6 +14,9 @@ import opennlp.tools.chunker.ChunkerModel;
  * @brief Main class for chunking text using OpenNLP.
  */
 public class ChunkerMain {
+
+	private static final Logger LOGGER = Logger.getLogger(ChunkerMain.class.getName());
+
 	/**
 	 * @brief Main method to run the chunker.
 	 * @param args Command line arguments.
@@ -54,14 +59,15 @@ public class ChunkerMain {
 				System.out.println("Token [" + sent[i] + "] has chunk tag [" + tag[i] + "] with probability = " + probs[i]);
 			}
 		} catch (IOException e) {
-			// Model loading failed, handle the error
-			e.printStackTrace();
+			// Log the error instead of printing the stack trace
+			LOGGER.log(Level.SEVERE, "Model loading failed", e);
 		} finally {
 			if (modelIn != null) {
 				try {
 					modelIn.close();
 				} catch (IOException e) {
-					// Handle the exception
+					// Log the exception during closing
+					LOGGER.log(Level.WARNING, "Failed to close InputStream", e);
 				}
 			}
 		}

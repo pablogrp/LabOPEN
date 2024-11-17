@@ -1,12 +1,8 @@
 package org.fogbeam.example.opennlp.training;
 
-import java.io.BufferedOutputStream;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-
+import java.io.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import opennlp.tools.postag.POSModel;
 import opennlp.tools.postag.POSSample;
 import opennlp.tools.postag.POSTaggerME;
@@ -20,6 +16,10 @@ import opennlp.tools.util.TrainingParameters;
  * @brief Main class for training a POS tagger model using OpenNLP.
  */
 public class PartOfSpeechTaggerTrainer {
+
+	// Crear un logger para capturar los errores
+	private static final Logger LOGGER = Logger.getLogger(PartOfSpeechTaggerTrainer.class.getName());
+
 	/**
 	 * @brief Main method to train the POS tagger model.
 	 * @param args Command line arguments.
@@ -27,6 +27,7 @@ public class PartOfSpeechTaggerTrainer {
 	public static void main(String[] args) {
 		POSModel model = null;
 		InputStream dataIn = null;
+
 		try {
 			// Load training data
 			dataIn = new FileInputStream("training_data/en-pos.train");
@@ -36,41 +37,40 @@ public class PartOfSpeechTaggerTrainer {
 			// Train the model
 			model = POSTaggerME.train("en", sampleStream, TrainingParameters.defaultParams(), null, null);
 		} catch (IOException e) {
-			// Failed to read or parse training data, training failed
-			e.printStackTrace();
+			// Usamos el logger para registrar el error
+			LOGGER.log(Level.SEVERE, "Failed to read or parse training data, training failed", e);
 		} finally {
 			if (dataIn != null) {
 				try {
 					dataIn.close();
 				} catch (IOException e) {
-					// Not an issue, training already finished.
-					// The exception should be logged and investigated
-					// if part of a production system.
-					e.printStackTrace();
+					// Registramos el error si ocurre
+					LOGGER.log(Level.WARNING, "Failed to close input stream", e);
 				}
 			}
 		}
 
 		OutputStream modelOut = null;
 		String modelFile = "models/en-pos.model";
+
 		try {
 			// Save the trained model
 			modelOut = new BufferedOutputStream(new FileOutputStream(modelFile));
 			model.serialize(modelOut);
 		} catch (IOException e) {
-			// Failed to save model
-			e.printStackTrace();
+			// Usamos el logger para registrar el error
+			LOGGER.log(Level.SEVERE, "Failed to save model", e);
 		} finally {
 			if (modelOut != null) {
 				try {
 					modelOut.close();
 				} catch (IOException e) {
-					// Failed to correctly save model.
-					// Written model might be invalid.
-					e.printStackTrace();
+					// Registramos el error si ocurre
+					LOGGER.log(Level.SEVERE, "Failed to correctly save model, the written model might be invalid", e);
 				}
 			}
 		}
+
 		System.out.println("done");
 	}
 }

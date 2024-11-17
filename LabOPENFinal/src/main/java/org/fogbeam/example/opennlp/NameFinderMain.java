@@ -3,6 +3,8 @@ package org.fogbeam.example.opennlp;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import opennlp.tools.namefind.NameFinderME;
 import opennlp.tools.namefind.TokenNameFinderModel;
@@ -13,28 +15,20 @@ import opennlp.tools.util.Span;
  * @brief Main class for finding names in text using OpenNLP.
  */
 public class NameFinderMain {
+
+	private static final Logger LOGGER = Logger.getLogger(NameFinderMain.class.getName());
+
 	/**
 	 * @brief Main method to run the name finder.
 	 * @param args Command line arguments.
-	 * @throws Exception if an error occurs during name finding.
 	 */
-	public static void main(String[] args) throws Exception {
-		InputStream modelIn = new FileInputStream("models/en-ner-person.model");
-		// InputStream modelIn = new FileInputStream( "models/en-ner-person.bin" );
-		try {
+	public static void main(String[] args) {
+		try (InputStream modelIn = new FileInputStream("models/en-ner-person.model")) {
 			TokenNameFinderModel model = new TokenNameFinderModel(modelIn);
 			NameFinderME nameFinder = new NameFinderME(model);
+
 			String[] tokens = {
-					//"A", "guy", "named",
-					// "Mr.",
-					"Phillip",
-					"Rhodes",
-					"is",
-					"presenting",
-					"at",
-					"some",
-					"meeting",
-					"."
+					"Phillip", "Rhodes", "is", "presenting", "at", "some", "meeting", "."
 			};
 
 			Span[] names = nameFinder.find(tokens);
@@ -47,25 +41,8 @@ public class NameFinderMain {
 			}
 			nameFinder.clearAdaptiveData();
 		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
-			if (modelIn != null) {
-				try {
-					modelIn.close();
-				} catch (IOException e) {
-					// Handle the exception
-				}
-			}
+			LOGGER.log(Level.SEVERE, "An error occurred while loading the name finder model", e);
 		}
 		System.out.println("done");
 	}
 }
-/*
-    StringBuilder sb = new StringBuilder();
-    for( int i = ns.getStart(); i < ns.getEnd(); i++ )
-    {
-     sb.append( tokens[i] + " " );
-    }
-
-    System.out.println( "The name is: " + sb.toString() );
- */

@@ -3,6 +3,8 @@ package org.fogbeam.example.opennlp;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import opennlp.tools.doccat.DoccatModel;
 import opennlp.tools.doccat.DocumentCategorizerME;
@@ -13,15 +15,14 @@ import opennlp.tools.doccat.DocumentCategorizerME;
  */
 public class DocumentClassifierMain {
 
+	private static final Logger LOGGER = Logger.getLogger(DocumentClassifierMain.class.getName());
+
 	/**
 	 * @brief Main method to run the document classifier.
 	 * @param args Command line arguments.
-	 * @throws Exception if an error occurs during document classification.
 	 */
-	public static void main(String[] args) throws Exception {
-		InputStream is = null;
-		try {
-			is = new FileInputStream("models/en-doccat.model");
+	public static void main(String[] args) {
+		try (InputStream is = new FileInputStream("models/en-doccat.model")) {
 
 			DoccatModel model = new DoccatModel(is);
 			String inputText = "What happens if we have declining bottom-line revenue?";
@@ -30,12 +31,10 @@ public class DocumentClassifierMain {
 			String category = categorizer.getBestCategory(outcomes);
 
 			System.out.println("Input classified as: " + category);
+		} catch (IOException e) {
+			LOGGER.log(Level.SEVERE, "An error occurred while loading the document categorizer model", e);
 		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			if (is != null) {
-				is.close();
-			}
+			LOGGER.log(Level.SEVERE, "An error occurred during document classification", e);
 		}
 		System.out.println("done");
 	}
