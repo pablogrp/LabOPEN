@@ -10,7 +10,14 @@ import opennlp.tools.sentdetect.SentenceDetectorME;
 import opennlp.tools.sentdetect.SentenceModel;
 
 
+/**
+ * Clase SentenceDetectionMain
+ */
 public class SentenceDetectionMain {
+	/**
+	 * Método main
+	 * @param args
+	 */
 	public static void main( String[] args ) throws Exception {
 		InputStream modelIn = new FileInputStream( "models/en-sent.model" );
 		InputStream demoDataIn = new FileInputStream( "demo_data/en-sent1.demo" );
@@ -34,8 +41,6 @@ public class SentenceDetectionMain {
 				}
 				catch( IOException e ) {}
 			}
-			
-			
 			if( demoDataIn != null ) {
 				try	{
 					demoDataIn.close();
@@ -46,6 +51,11 @@ public class SentenceDetectionMain {
 		System.out.println( "done" );
 	}
 
+	/**
+	 * Método convertStreamToString
+	 * @param is
+	 * @return
+	 */
 	static String convertStreamToString(java.io.InputStream is) {
 	    java.util.Scanner s = new java.util.Scanner(is).useDelimiter("\\A");
 	    return s.hasNext() ? s.next() : "";
