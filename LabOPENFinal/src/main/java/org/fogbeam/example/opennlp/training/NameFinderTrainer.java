@@ -1,6 +1,4 @@
-
 package org.fogbeam.example.opennlp.training;
-
 
 import java.io.BufferedOutputStream;
 import java.io.FileInputStream;
@@ -16,34 +14,38 @@ import opennlp.tools.util.ObjectStream;
 import opennlp.tools.util.PlainTextByLineStream;
 import opennlp.tools.util.TrainingParameters;
 
-/* NOTE: The training data should contain at least 15000 sentences 
- * to create a model which performs well. */
-
+/**
+ * @class NameFinderTrainer
+ * @brief Main class for training a name finder model using OpenNLP.
+ */
 public class NameFinderTrainer {
-	public static void main( String[] args ) throws Exception	{
-		Charset charset = Charset.forName( "UTF-8" );
-		ObjectStream<String> lineStream = new PlainTextByLineStream(new FileInputStream( "training_data/en-ner-person.train" ), charset );
-		ObjectStream<NameSample> sampleStream = new NameSampleDataStream(lineStream );
+	/**
+	 * @brief Main method to train the name finder model.
+	 * @param args Command line arguments.
+	 * @throws Exception if an error occurs during training.
+	 */
+	public static void main(String[] args) throws Exception {
+		Charset charset = Charset.forName("UTF-8");
+		ObjectStream<String> lineStream = new PlainTextByLineStream(new FileInputStream("training_data/en-ner-person.train"), charset);
+		ObjectStream<NameSample> sampleStream = new NameSampleDataStream(lineStream);
 		TokenNameFinderModel model;
-		try	{
-			model = NameFinderME.train( "en", "person", sampleStream,
-					TrainingParameters.defaultParams(), (byte[]) null,
-					Collections.<String, Object> emptyMap() );
-		}
-		finally	{
+		try {
+			// Train the model
+			model = NameFinderME.train("en", "person", sampleStream, TrainingParameters.defaultParams(), (byte[]) null, Collections.<String, Object>emptyMap());
+		} finally {
 			sampleStream.close();
 		}
 		BufferedOutputStream modelOut = null;
-		try	{
+		try {
+			// Save the trained model
 			String modelFile = "models/en-ner-person.model";
-			modelOut = new BufferedOutputStream( new FileOutputStream( modelFile ) );
-			model.serialize( modelOut );
-		}
-		finally	{
-			if( modelOut != null )	{
+			modelOut = new BufferedOutputStream(new FileOutputStream(modelFile));
+			model.serialize(modelOut);
+		} finally {
+			if (modelOut != null) {
 				modelOut.close();
 			}
 		}
-		System.out.println( "done" );
+		System.out.println("done");
 	}
 }
