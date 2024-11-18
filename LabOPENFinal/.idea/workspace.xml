@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6f40ded-8f15-4c3f-ac49-9eeaba0f7123" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/en-token.model" beforeDir="false" afterPath="$PROJECT_DIR$/models/en-token.model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../PracticaDAPPokedex/UnoLAB/.idea/misc.xml" beforeDir="false" />
@@ -114,18 +117,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.TokenizerMain.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TokenizerTrainer.executor&quot;: &quot;Run&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/pablo/OneDrive/Escritorio/LabOPENFinal&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.TokenizerMain.executor": "Run",
+    "Application.TokenizerTrainer.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/pablo/OneDrive/Escritorio/LabOPENFinal"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\pablo\OneDrive\Escritorio\LabOPENFinal\src\main\java\org\fogbeam\example\opennlp\inputs" />
